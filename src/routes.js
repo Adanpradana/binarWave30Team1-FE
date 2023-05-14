@@ -3,8 +3,11 @@ import About from "./pages/landingpage/About";
 import Home from "./pages/landingpage/Home";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+
 //users layout
 import Dashboard from "./pages/dashboard";
+import Games from "./pages/games";
+
 export const routes = [
   {
     name: "home",
@@ -32,13 +35,13 @@ export const routes = [
 
   {
     name: "users dashboard",
-    path: "/users",
+    path: "/dashboard",
     element: <Dashboard />,
     children: [
       {
         name: "users game",
         path: "/games",
-        element: <About />,
+        element: <Games />,
       },
     ],
   },

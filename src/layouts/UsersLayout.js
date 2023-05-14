@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { useNavigate, Route, Routes, Navigate } from "react-router-dom";
 import { routes } from "../routes";
-import { Navbar } from "react-bootstrap";
 import { getRoutes } from "../config/getRoutes";
 import Home from "../pages/landingpage/Home";
+import Dashboard from "../pages/dashboard";
+import Sidebar from "../components/Sidebar";
 
 export default function UsersLayout() {
   const navigate = useNavigate();
@@ -14,11 +15,11 @@ export default function UsersLayout() {
 
   return (
     <>
-      <Navbar>hello navbar</Navbar>
+      <Sidebar />
       <Routes>
-        <Route path="/users" element={<Home />} />
+        <Route path="/dashboard" element={<Dashboard />} />
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to={"/users"} />} />{" "}
+        <Route path="*" element={<Navigate to={"/users/dashboard"} />} />{" "}
       </Routes>
     </>
   );
