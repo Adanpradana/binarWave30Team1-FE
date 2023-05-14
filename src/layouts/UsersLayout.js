@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useNavigate, Route, Routes, Navigate } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
-import Home from "../pages/landingpage/Home";
 import Dashboard from "../pages/dashboard";
 import Sidebar from "../components/Sidebar";
 
