@@ -3,7 +3,6 @@ import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes";
 import { Navbar } from "react-bootstrap";
 import Home from "../pages/landingpage/Home";
-import Register from "../pages/auth/Register";
 import { getRoutes } from "../config/getRoutes";
 
 export default function LandingpageLayout() {
