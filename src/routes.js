@@ -7,6 +7,7 @@ import Login from "./pages/auth/Login";
 //users layout
 import Dashboard from "./pages/dashboard";
 import Games from "./pages/games";
+import Score from "./pages/score/Score";
 
 export const routes = [
   {
@@ -42,6 +43,11 @@ export const routes = [
         name: "users game",
         path: "/games",
         element: <Games />,
+      },
+      {
+        name: "high score",
+        path: "/score",
+        element: <Score />,
       },
     ],
   },
