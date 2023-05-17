@@ -83,7 +83,7 @@
   left: 0;
 }
 .body-pd {
-  padding-left: calc(var(--nav-width) + 1rem);
+  padding-left: calc(var(--nav-width));
 }
 .active {
   color: var(--white-color);

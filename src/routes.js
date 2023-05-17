@@ -14,7 +14,6 @@ export const routes = [
     name: "home",
     path: "/",
     element: <Home />,
-    layout: "/",
     children: [
       {
         name: "register users",
@@ -36,7 +35,7 @@ export const routes = [
 
   {
     name: "users dashboard",
-    path: "/dashboard",
+    path: "/users",
     element: <Dashboard />,
     children: [
       {

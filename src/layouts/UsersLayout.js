@@ -16,7 +16,7 @@ export default function UsersLayout() {
     <>
       <Sidebar />
       <Routes>
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/users" element={<Dashboard />} />
         {getRoutes(routes)}
         <Route path="*" element={<Navigate to={"/users/dashboard"} />} />{" "}
       </Routes>
