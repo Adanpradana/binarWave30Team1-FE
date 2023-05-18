@@ -9,7 +9,7 @@ function App() {
   return (
     <Routes>
       <Route path="/*" element={<LandingpageLayout />} />
-      <Route path="/users/" element={<UsersLayout />} />
+      <Route path="/users/*" element={<UsersLayout />} />
       <Route path="*" element={<Navigate to={"/"} />} />
     </Routes>
   );
