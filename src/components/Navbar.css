@@ -1,0 +1,12 @@
+.background{
+    background-color: #000722;
+    margin: 0px;
+    height: 100px;
+}
+
+.nav-link {
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    color: #ffff !important;
+    margin-right: 15px;
+  }

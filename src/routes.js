@@ -3,6 +3,7 @@ import About from "./pages/landingpage/About";
 import Home from "./pages/landingpage/Home";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import Game from "./pages/games"
 //users layout
 import Dashboard from "./pages/dashboard";
 export const routes = [
@@ -38,7 +39,7 @@ export const routes = [
       {
         name: "users game",
         path: "/games",
-        element: <About />,
+        element: <Game />,
       },
     ],
   },
