@@ -3,11 +3,7 @@ import About from "./pages/landingpage/About";
 import Home from "./pages/landingpage/Home";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
-<<<<<<< HEAD
-import Game from "./pages/games"
-=======
 
->>>>>>> dev
 //users layout
 import Dashboard from "./pages/dashboard";
 import Games from "./pages/games";
@@ -45,16 +41,12 @@ export const routes = [
       {
         name: "users game",
         path: "/games",
-<<<<<<< HEAD
-        element: <Game />,
-=======
         element: <Games />,
       },
       {
         name: "high score",
         path: "/score",
         element: <Score />,
->>>>>>> dev
       },
     ],
   },

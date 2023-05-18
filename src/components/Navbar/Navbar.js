@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar, Image } from "react-bootstrap";
 import './Navbar.css';
-import ImgUser from "../asset/user.png";
+import ImgUser from "../../asset/user.png";
 
 
 export default function Navbar1() {

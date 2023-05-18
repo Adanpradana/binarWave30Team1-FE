@@ -3,7 +3,7 @@ import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes";
 import Home from "../pages/landingpage/Home";
 import { getRoutes } from "../config/getRoutes";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/Navbar/Navbar.js";
 
 export default function LandingpageLayout() {
   const navigate = useNavigate();
@@ -14,7 +14,7 @@ export default function LandingpageLayout() {
 
   return (
     <>
-        <Navbar/>
+      <Navbar/>
       <Routes>
         <Route path="/" element={<Home />} />
         {getRoutes(routes)}

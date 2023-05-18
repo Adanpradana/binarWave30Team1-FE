@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Card, CardGroup } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 import './game.css';
 import game1 from '../../asset/game1.jpg';
 

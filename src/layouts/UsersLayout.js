@@ -2,13 +2,9 @@ import { useEffect } from "react";
 import { useNavigate, Route, Routes, Navigate } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
-<<<<<<< HEAD
-import Home from "../pages/landingpage/Home";
-import Navbar from "../components/Navbar";
-=======
 import Dashboard from "../pages/dashboard";
 import Sidebar from "../components/Sidebar";
->>>>>>> dev
+import Navbar from "../components/Navbar/Navbar.js";
 
 export default function UsersLayout() {
   const navigate = useNavigate();
@@ -19,11 +15,8 @@ export default function UsersLayout() {
 
   return (
     <>
-<<<<<<< HEAD
-        <Navbar />
-=======
+      <Navbar />
       <Sidebar />
->>>>>>> dev
       <Routes>
         <Route path="/users" element={<Dashboard />} />
         {getRoutes(routes)}
