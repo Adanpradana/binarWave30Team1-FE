@@ -12,36 +12,54 @@ import Score from "./pages/score/Score";
 export const routes = [
   {
     name: "home",
-    path: "/",
-    element: <Home />,
+    layout: "/",
     children: [
+      {
+        name: "login  users",
+        path: "/",
+        element: <Home />,
+      },
+      {
+        name: "login  users",
+        path: "/games",
+        element: <Games />,
+      },
+      {
+        name: "about us",
+        path: "/about",
+        element: <About />,
+      },
+      {
+        name: "contact us",
+        path: "/contact",
+        element: "",
+      },
+    ],
+  },
+  {
+    name: "auth",
+    layout: "/auth",
+    children: [
+      {
+        name: "login users",
+        path: "/login",
+        element: <Login />,
+      },
       {
         name: "register users",
         path: "/register",
         element: <Register />,
       },
-      {
-        name: "login  users",
-        path: "login",
-        element: <Login />,
-      },
-      {
-        name: "about us",
-        path: "about",
-        element: <About />,
-      },
     ],
   },
-
   {
     name: "users dashboard",
-    path: "/users",
-    element: <Dashboard />,
+    layout: "/users",
     children: [
       {
         name: "users game",
-        path: "/games",
-        element: <Games />,
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         name: "high score",
