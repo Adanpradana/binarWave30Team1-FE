@@ -1,47 +1,67 @@
 // landing page layout
-import About from "./pages/landingpage/About";
+import About from "./pages/landingpage/About/About";
 import Home from "./pages/landingpage/Home";
+import ContactUs from "./pages/landingpage/ContactUs/";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
+import Game from "./pages/landingpage/Games";
 
 //users layout
 import Dashboard from "./pages/dashboard";
-import Games from "./pages/games";
-import Score from "./pages/score/Score";
+import Games from "./pages/landingpage/Games";
+import Score from "./pages/dashboard/score/Score";
 
 export const routes = [
   {
     name: "home",
-    path: "/",
-    element: <Home />,
+    layout: "/",
     children: [
+      {
+        name: "Home",
+        path: "/",
+        element: <Home />,
+      },
+      {
+        name: "Games",
+        path: "/games",
+        element: <Games />,
+      },
+      {
+        name: "About us",
+        path: "/about",
+        element: <About />,
+      },
+      {
+        name: "Contact us",
+        path: "/contact",
+        element: <ContactUs />,
+      },
+    ],
+  },
+  {
+    name: "auth",
+    layout: "/auth",
+    children: [
+      {
+        name: "login users",
+        path: "/login",
+        element: <Login />,
+      },
       {
         name: "register users",
         path: "/register",
         element: <Register />,
       },
-      {
-        name: "login  users",
-        path: "login",
-        element: <Login />,
-      },
-      {
-        name: "about us",
-        path: "about",
-        element: <About />,
-      },
     ],
   },
-
   {
     name: "users dashboard",
-    path: "/users",
-    element: <Dashboard />,
+    layout: "/users",
     children: [
       {
         name: "users game",
-        path: "/games",
-        element: <Games />,
+        path: "/dashboard",
+        element: <Dashboard />,
       },
       {
         name: "high score",

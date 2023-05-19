@@ -1,9 +1,5 @@
-import { Button } from "react-bootstrap";
-
+import { Button, Container } from "react-bootstrap";
+import "./style.css";
 export default function Login() {
-  return (
-    <div>
-      <Button color="primary">hello im Login</Button>
-    </div>
-  );
+  return <Container>hello</Container>;
 }

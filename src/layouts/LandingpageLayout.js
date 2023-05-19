@@ -1,9 +1,8 @@
 import { useEffect } from "react";
 import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes";
-import Home from "../pages/landingpage/Home";
 import { getRoutes } from "../config/getRoutes";
-import Navbar from "../components/Navbar/Navbar.js";
+import Navbar1 from "../components/Navbar/Navbar.js";
 
 export default function LandingpageLayout() {
   const navigate = useNavigate();
@@ -14,10 +13,11 @@ export default function LandingpageLayout() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar1 />
       <Routes>
-        <Route path="/" element={<Home />} />
-        {getRoutes(routes)}
+        {getRoutes(routes, "/")}
+        {/* <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} /> */}
         <Route path="*" element={<Navigate to={"/"} />} />{" "}
       </Routes>
     </>
