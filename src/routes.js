@@ -1,9 +1,10 @@
 // landing page layout
 import About from "./pages/landingpage/About";
 import Home from "./pages/landingpage/Home";
+import ContactUs from "./pages/landingpage/ContactUs";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
-import Game from "./pages/games"
+import Game from "./pages/games";
 //users layout
 import Dashboard from "./pages/dashboard";
 export const routes = [
@@ -27,6 +28,11 @@ export const routes = [
         name: "about us",
         path: "about",
         element: <About />,
+      },
+      {
+        name: "contact us",
+        path: "contact",
+        element: <ContactUs />,
       },
     ],
   },
