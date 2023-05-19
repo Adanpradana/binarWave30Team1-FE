@@ -1,10 +1,10 @@
 import React from 'react'
 import './PopularGame.css';
 import {Nav, Card, Row, Col} from "react-bootstrap/";
-import game1 from "../../../asset/game1.jpg"
-import game2 from "../../../asset/game2.jpg"
-import game3 from "../../../asset/game3.jpg"
-import game4 from "../../../asset/game4.jpg"
+import game1 from "../../../assets/game1.jpg"
+import game2 from "../../../assets/game2.jpg"
+import game3 from "../../../assets/game3.jpg"
+import game4 from "../../../assets/game4.jpg"
 
 
 export const PopularGame = () => {

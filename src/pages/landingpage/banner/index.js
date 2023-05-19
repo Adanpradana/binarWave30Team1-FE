@@ -1,11 +1,11 @@
 import {Carousel} from "react-bootstrap/";
 import React from 'react';
-import banner1 from "../../../asset/banner1.jpg"
-import banner2 from "../../../asset/banner2.jpg"
-import banner3 from "../../../asset/banner3.jpg"
+import banner1 from "../../../assets/banner1.jpg"
+import banner2 from "../../../assets/banner2.jpg"
+import banner3 from "../../../assets/banner3.jpg"
 import './Banner.css';
 
-export const Banner = () => {
+export const BannerPage = () => {
   return (
    <div className="bg-banner"> 
         <Carousel variant="light">
