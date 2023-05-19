@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 import { getRoutes } from "../config/getRoutes";
 import { routes } from "../routes";
-import Login from "../pages/auth/Login";
 export default function AuthLayout() {
   const navigate = useNavigate();
   useEffect(() => {
