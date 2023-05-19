@@ -1,3 +1,4 @@
+import { Nav } from "react-bootstrap";
 import { Route } from "react-router-dom";
 
 export const getRoutes = (routes, layout) => {
@@ -9,4 +10,13 @@ export const getRoutes = (routes, layout) => {
     }
     return null;
   });
+};
+
+export const gotoPage = (routes) => {
+  const component = routes.flatMap((props) => {
+    return props.children.map((prop) => {
+      return <Nav.Link href={prop.path}>{prop.name}</Nav.Link>;
+    });
+  });
+  return component.slice(0, 4);
 };

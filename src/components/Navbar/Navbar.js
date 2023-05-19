@@ -1,6 +1,8 @@
 import { Container, Nav, Navbar, Image } from "react-bootstrap";
 import "./Navbar.css";
-import ImgUser from "../../asset/user.png";
+import ImgUser from "../../assets/user.png";
+import { gotoPage } from "../../config/getRoutes";
+import { routes } from "../../routes";
 
 export default function Navbar1() {
   return (
@@ -25,10 +27,7 @@ export default function Navbar1() {
             style={{ maxHeight: "100px", margin: "100px", fontSize: "20px" }}
             navbarScroll
           >
-            <Nav.Link href="/home">Home</Nav.Link>
-            <Nav.Link href="/games">Games</Nav.Link>
-            <Nav.Link href="/about">About Me</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
+            {gotoPage(routes)}
           </Nav>
 
           <Nav.Link href="/home">

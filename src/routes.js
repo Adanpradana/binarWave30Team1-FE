@@ -1,14 +1,15 @@
 // landing page layout
-import About from "./pages/landingpage/About";
+import About from "./pages/landingpage/About/About";
 import Home from "./pages/landingpage/Home";
-import ContactUs from "./pages/landingpage/ContactUs";
+import ContactUs from "./pages/landingpage/ContactUs/";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
-import Game from "./pages/games";
+import Game from "./pages/landingpage/Games";
+
 //users layout
 import Dashboard from "./pages/dashboard";
-import Games from "./pages/games";
-import Score from "./pages/score/Score";
+import Games from "./pages/landingpage/Games";
+import Score from "./pages/dashboard/score/Score";
 
 export const routes = [
   {
@@ -16,22 +17,22 @@ export const routes = [
     layout: "/",
     children: [
       {
-        name: "login  users",
+        name: "Home",
         path: "/",
         element: <Home />,
       },
       {
-        name: "login  users",
+        name: "Games",
         path: "/games",
         element: <Games />,
       },
       {
-        name: "about us",
+        name: "About us",
         path: "/about",
         element: <About />,
       },
       {
-        name: "contact us",
+        name: "Contact us",
         path: "/contact",
         element: <ContactUs />,
       },
