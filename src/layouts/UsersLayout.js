@@ -4,7 +4,7 @@ import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import Dashboard from "../pages/dashboard";
 import Sidebar from "../components/Sidebar";
-import Navbar from "../components/Navbar/Navbar.js";
+// import Navbar from "../components/Navbar/Navbar.js";
 
 export default function UsersLayout() {
   const navigate = useNavigate();
@@ -15,7 +15,6 @@ export default function UsersLayout() {
 
   return (
     <>
-      <Navbar />
       <Sidebar />
       <Routes>
         <Route path="/users" element={<Dashboard />} />

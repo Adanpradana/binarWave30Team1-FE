@@ -1,4 +1,4 @@
-.bg{
+.bg-game{
     background-image: url("../../asset/bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -6,7 +6,7 @@
 }
 
 .left{
-    margin-left: 100px;
+    margin-left: 50px;
 }
 
 .tittle{
