@@ -30,7 +30,7 @@ export default function Navbar1() {
             {gotoPage(routes)}
           </Nav>
 
-          <Nav.Link href="/home">
+          <Nav.Link href="/auth/login">
             <Image
               src={ImgUser}
               style={{ width: 40, height: 40, marginRight: "100px" }}
