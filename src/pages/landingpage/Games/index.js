@@ -1,12 +1,13 @@
 import React from 'react'
-import { Nav, Col, Row, CardGroup } from "react-bootstrap";
+import { Nav, Col, Row } from "react-bootstrap";
 import CardGame from './CardGame';
 import './game.css';
+
 
 export default function games() {
   return (
     <>
-      <Nav className='bg'>
+      <Nav className='bg-game'>
         <Row>
           <Col className="left">
             <p className="tittle">Enjoy Every Game In Virtual</p>
@@ -17,12 +18,24 @@ export default function games() {
           </Col> 
           <Col className="right"> </Col>
         </Row>
-          <CardGroup>
+
+        <Row style={{margin:'0px 50px'}}>
+          <Col>
             <CardGame />
+          </Col>
+          <Col>
             <CardGame />
+          </Col>
+          <Col>
             <CardGame />
+          </Col>
+          <Col>
             <CardGame />
-          </CardGroup>
+          </Col>
+          <Col>
+            <CardGame />
+          </Col>
+        </Row>
       </Nav>
     
     </>

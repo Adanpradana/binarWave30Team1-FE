@@ -3,6 +3,7 @@ import { useNavigate, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import Sidebar from "../components/Sidebar";
+// import Navbar from "../components/Navbar/Navbar.js";
 
 export default function UsersLayout() {
   const navigate = useNavigate();

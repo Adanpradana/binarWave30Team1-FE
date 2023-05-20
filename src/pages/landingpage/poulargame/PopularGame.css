@@ -1,0 +1,32 @@
+.bg-popular-game{
+    background-image: url("../../../assets/bgPopularGame.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 150px 200px;
+}
+
+.tittle-popular-game{
+    color: white;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 83px;
+    text-align: left;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-bottom: 50px;
+}
+
+.tittle-game{
+    color: white;
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 83px;
+    text-align: left;
+    text-transform: uppercase;
+    padding-bottom: 20px;
+
+}

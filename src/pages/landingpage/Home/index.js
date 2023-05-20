@@ -1,9 +1,12 @@
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import {BannerPage} from '../banner';
+import {PopularGame} from '../poulargame/PopularGame.js'
 
 export default function Home() {
   return (
     <div>
-      <Button variant="primary">hello im home kaka</Button>
+      <BannerPage />
+      <PopularGame />
     </div>
   );
 }
