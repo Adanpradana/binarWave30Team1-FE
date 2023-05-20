@@ -14,7 +14,6 @@ function App() {
         <Route path="/*" element={<LandingpageLayout />} />
         <Route path="/auth/*" element={<AuthLayout />} />
         <Route path="/users/*" element={<UsersLayout />} />
-        {/* <Route path="*" element={<Navigate to={"/"} />} /> */}
       </Routes>
     </>
   );

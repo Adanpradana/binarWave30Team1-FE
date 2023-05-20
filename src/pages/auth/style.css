@@ -1,5 +1,5 @@
-body.my-login-page {
-  background-color: #ebeef1;
+div.my-login-page {
+  background-color: #dbe1e7;
   font-size: 14px;
 }
 
@@ -51,6 +51,11 @@ body.my-login-page {
   margin: 40px 0;
   color: #888;
   text-align: center;
+}
+
+.text-blue {
+  color: blue;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 425px) {
