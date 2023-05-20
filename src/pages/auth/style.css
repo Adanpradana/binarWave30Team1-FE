@@ -58,6 +58,11 @@ div.my-login-page {
   cursor: pointer;
 }
 
+.show-password {
+  right: 2%;
+  padding: 5px;
+  color: blue;
+}
 @media screen and (max-width: 425px) {
   .my-login-page .card-wrapper {
     width: 90%;
