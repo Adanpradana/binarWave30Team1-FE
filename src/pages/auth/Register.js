@@ -1,4 +1,4 @@
-import { Container, Row, Card, Nav } from "react-bootstrap";
+import { Container, Row, Card } from "react-bootstrap";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import "./style.css";
 import { Link } from "react-router-dom";
