@@ -1,4 +1,4 @@
-import { Button, Container, Row, Card, Nav } from "react-bootstrap";
+import { Container, Row, Card, Nav } from "react-bootstrap";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import "./style.css";
 import { Link } from "react-router-dom";
@@ -71,7 +71,7 @@ export default function Login() {
                 </div>
                 <div className="mt-4 text-center">
                   Don't have an account ?
-                  <Link to={"auth/register"}>Register now</Link>
+                  <Link to={"/auth/register"}>Register now</Link>
                 </div>
               </form>
             </Card.Body>
