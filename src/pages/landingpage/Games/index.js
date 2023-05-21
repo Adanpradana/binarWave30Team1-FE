@@ -3,14 +3,9 @@ import { Nav, Col, Row } from "react-bootstrap";
 import CardGame from "./CardGame";
 import "./game.css";
 import api from "../../../utils/services/api";
-import axios from "axios";
 import { errorToast } from "../../../utils/globalToast";
-import { ToastContainer } from "react-toastify";
 
 export default function Games() {
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [desc, setDesc] = useState("");
   const [games, setGames] = useState([]);
 
   const getGamesData = async () => {
@@ -39,20 +34,24 @@ export default function Games() {
           <Col className="right"> </Col>
         </Row>
       </Nav>
-      <main className="pt-5">
-        <Row style={{ margin: "0px 50px", width: "100%" }}>
-          <Col md={4} sm={2}>
-            {games.map((game, key) => (
+      <main className="pt-5 w-100 m-0">
+        <Row className="px-3 gap-3 m-0 justify-content-center">
+          {games.map((game, key) => (
+            <Col
+              xs={12}
+              sm={6}
+              md={4}
+              lg={3}
+              className=" d-flex justify-content-center p-0 m-0"
+            >
               <CardGame
                 key={key}
                 title={game.Name}
-                image={
-                  "https://binarwave30team1-be-production-deb9.up.railway.app/images/2.webp"
-                }
+                image={game.thumbnail_url}
                 description={game.Description}
               />
-            ))}
-          </Col>
+            </Col>
+          ))}
         </Row>
       </main>
     </div>
