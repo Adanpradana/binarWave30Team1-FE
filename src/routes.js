@@ -4,7 +4,6 @@ import Home from "./pages/landingpage/Home";
 import ContactUs from "./pages/landingpage/ContactUs/";
 import Register from "./pages/auth/Register";
 import Login from "./pages/auth/Login";
-import Game from "./pages/landingpage/Games";
 
 //users layout
 import Dashboard from "./pages/dashboard";

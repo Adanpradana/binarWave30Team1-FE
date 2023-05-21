@@ -4,6 +4,7 @@ import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import GameDetail from "../pages/landingpage/Games/GameDetail";
 import Navbar1 from "../components/Navbar/Navbar.js";
+import { ToastContainer } from "react-toastify";
 
 export default function LandingpageLayout() {
   const navigate = useNavigate();
@@ -15,6 +16,7 @@ export default function LandingpageLayout() {
   return (
     <>
       <Navbar1 />
+      <ToastContainer />
       <Routes>
         {getRoutes(routes, "/")}
         <Route path="/games/details/:id" element={<GameDetail />} />

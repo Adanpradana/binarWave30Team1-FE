@@ -15,7 +15,11 @@ export const getRoutes = (routes, layout) => {
 export const gotoPage = (routes) => {
   const component = routes.flatMap((props) => {
     return props.children.map((prop) => {
-      return <Nav.Link href={prop.path}>{prop.name}</Nav.Link>;
+      return (
+        <Nav.Link key={props.id} href={prop.path}>
+          {prop.name}
+        </Nav.Link>
+      );
     });
   });
   return component.slice(0, 4);

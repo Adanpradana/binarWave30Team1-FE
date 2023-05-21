@@ -9,9 +9,7 @@ const config = {
   },
 };
 
-const api = () => {
-  return axios.create(config);
-};
+const api = axios.create(config);
 
 // error handler request error
 api.interceptors.request.use(
@@ -22,12 +20,19 @@ api.interceptors.request.use(
     }
     return config;
   },
-  (error) => errorToast(error.response.data.msg)
+  (error) => {
+    errorToast(error.response.data.msg);
+    Promise.reject(error);
+  }
 );
 
-api.interceptors.response.use(
-  async (response) => response,
-  (error) => errorToast(error.response.data.msg)
-);
+// api.interceptors.response.use(
+//   async (response) => response,
+
+//   (error) => {
+//     errorToast(error.response.data.msg);
+//     Promise.reject(error);
+//   }
+// );
 
 export default api;
