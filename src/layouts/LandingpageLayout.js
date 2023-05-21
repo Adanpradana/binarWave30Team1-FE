@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { Navigate, useNavigate, Route, Routes } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
+import GameDetail from "../pages/landingpage/Games/GameDetail";
 import Navbar1 from "../components/Navbar/Navbar.js";
 
 export default function LandingpageLayout() {
@@ -16,7 +17,7 @@ export default function LandingpageLayout() {
       <Navbar1 />
       <Routes>
         {getRoutes(routes, "/")}
-        <Route path="/games/details/:id" />
+        <Route path="/games/details/:id" element={<GameDetail />} />
         <Route path="*" element={<Navigate to={"/"} />} />{" "}
       </Routes>
     </>
