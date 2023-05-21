@@ -3,6 +3,7 @@ import { useNavigate, Route, Routes, Navigate, Outlet } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import Sidebar from "../components/Sidebar";
+import { ToastContainer } from "react-toastify";
 // import Navbar from "../components/Navbar/Navbar.js";
 
 export default function UsersLayout() {
@@ -15,6 +16,7 @@ export default function UsersLayout() {
   return (
     <>
       <Sidebar />
+      <ToastContainer />
       <Routes>
         {getRoutes(routes, "/users")}
         <Route path="*" element={<Navigate to={"/users/dashboard"} />} />{" "}
