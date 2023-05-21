@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
-import { errorToast, successToast } from "../../utils/globalToast";
-import { ToastContainer } from "react-toastify";
+import { errorToast } from "../../utils/globalToast";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
