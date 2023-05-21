@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { ThreeDots } from "react-loader-spinner";
-import { errorToast, successToast } from "../../utils/globalToast";
-import { ToastContainer } from "react-toastify";
+import { errorToast } from "../../utils/globalToast";
+// import { ToastContainer } from "react-toastify";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +14,7 @@ export default function Login() {
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = async () => {};
+  // const login = async () => {};
   const loginHandler = async (e) => {
     e.preventDefault();
     setLoading(true);

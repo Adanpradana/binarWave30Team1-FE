@@ -10,7 +10,7 @@ export default function Games() {
 
   const getGamesData = async () => {
     try {
-      const response = await api.get("/games/rooms");
+      const response = await api.get("https://binarwave30team1-be-production-deb9.up.railway.app/games/rooms");
       setGames(response.data.rooms);
     } catch (error) {
       errorToast(error.code);
@@ -34,7 +34,7 @@ export default function Games() {
           <Col className="right"> </Col>
         </Row>
       </Nav>
-      <main className="pt-5 w-100 m-0">
+      <main className="pt-5 w-100 m-0 list-game">
         <Row className="px-3 gap-3 m-0 justify-content-center">
           {games.map((game, key) => (
             <Col
