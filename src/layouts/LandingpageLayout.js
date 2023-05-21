@@ -16,8 +16,7 @@ export default function LandingpageLayout() {
       <Navbar1 />
       <Routes>
         {getRoutes(routes, "/")}
-        {/* <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} /> */}
+        <Route path="/games/details/:id" />
         <Route path="*" element={<Navigate to={"/"} />} />{" "}
       </Routes>
     </>

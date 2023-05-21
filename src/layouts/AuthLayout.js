@@ -17,7 +17,6 @@ export default function AuthLayout() {
       <div className="w-100 h-100 my-login-page">
         <Routes>
           {getRoutes(routes, "/auth")}
-          {/* <Route path="/login" element={<Login />} /> */}
           <Route path="*" element={<Navigate to={"/auth/login"} />} />{" "}
         </Routes>
       </div>
