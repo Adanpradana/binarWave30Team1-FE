@@ -1,0 +1,17 @@
+.bg-gamedetail{
+
+  background-image: url("../../../../assets/bg4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-bottom: 200px;
+  padding-top: 100px;
+}
+
+.btn-play-now{
+  background-color: black !important;
+}
+
+.btn-play-now:hover{
+  background-color: gray !important;
+  color: black !important;
+}
