@@ -1,22 +1,23 @@
 import { Link } from "react-router-dom";
 import "./style.css";
 import { BiMenu, BiMenuAltLeft } from "react-icons/bi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TokenService from "../../utils/services/token";
 import jwtDecode from "jwt-decode";
+
 export default function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
+  const [name, setName] = useState("");
 
-  const requestLogout = () => {
-    TokenService.removeToken();
-    window.location.href = "/";
-  };
-
-  const token = TokenService.getToken("access_token");
-  const user = jwtDecode(token);
-  const username = user.Username; // Assign the username directly
-
-  localStorage.setItem("username", username);
+  useEffect(() => {
+    const token = TokenService.getToken("access_token");
+    if (token) {
+      const user = jwtDecode(token);
+      const username = user.Username;
+      localStorage.setItem("username", username);
+      setName(username);
+    }
+  }, []);
   // let user = null;
   // if (localStorage.getItem("token")) {
   //   user = jwtDecode(localStorage.getItem("token"));
@@ -25,6 +26,10 @@ export default function Sidebar() {
   // }
   // console.log(user);
 
+  const requestLogout = () => {
+    TokenService.removeToken();
+    window.location.href = "/";
+  };
   return (
     <div className={sidebar ? null : "body-pd snippet-body"}>
       <header className={sidebar ? "header" : "header body-pd"}>
@@ -33,7 +38,7 @@ export default function Sidebar() {
         </div>
         <div>
           {" "}
-          welcome back <span style={{ fontWeight: "bold" }}>{username}</span>
+          welcome back <span style={{ fontWeight: "bold" }}>{name}</span>
         </div>
         <div className="header_img">
           <img src="https://i.imgur.com/hczKIze.jpg" alt="" />
