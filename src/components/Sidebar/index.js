@@ -47,11 +47,17 @@ export default function Sidebar() {
               <span className="nav_logo-name">lalaeyeyey</span>
             </Link>
             <div className="nav_list">
-              <Link className="nav_link active text-decoration-none">
+              <Link
+                to={"/users/dashboard"}
+                className="nav_link active text-decoration-none"
+              >
                 <i className="bx bx-grid-alt nav_icon"></i>
                 <span className="nav_name">Dashboard</span>
               </Link>
-              <Link className="nav_link text-decoration-none">
+              <Link
+                to={"/users/score"}
+                className="nav_link text-decoration-none"
+              >
                 <i className="bx bx-user nav_icon"></i>
                 <span className="nav_name">Users</span>
               </Link>

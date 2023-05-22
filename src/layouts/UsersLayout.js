@@ -4,6 +4,7 @@ import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import Sidebar from "../components/Sidebar";
 import { ToastContainer } from "react-toastify";
+import Score from "../pages/dashboard/score/Score";
 // import Navbar from "../components/Navbar/Navbar.js";
 
 export default function UsersLayout() {

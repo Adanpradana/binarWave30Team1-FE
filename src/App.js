@@ -38,7 +38,7 @@ function App() {
         path="/*"
         element={
           isAuthenticated ? (
-            <Navigate to={"/users/dashboard"} />
+            <Navigate to={"/users/dashboard/"} />
           ) : (
             <LandingpageLayout />
           )
@@ -48,9 +48,9 @@ function App() {
         path="/auth/*"
         element={
           isAuthenticated ? (
-            <Navigate to={"/users/dashboard"} />
+            <Navigate to={"/users/dashboard/"} />
           ) : (
-            <AuthLayout setAuthenticated />
+            <AuthLayout />
           )
         }
       />
