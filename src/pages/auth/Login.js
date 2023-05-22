@@ -7,6 +7,7 @@ import { useState } from "react";
 import { ThreeDots } from "react-loader-spinner";
 import { errorToast, successToast } from "../../utils/globalToast";
 import api from "../../utils/services/api";
+import TokenService from "../../utils/services/token";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -26,9 +27,8 @@ export default function Login() {
       if (response.data.auth === false) {
         errorToast(response.data.message);
       } else {
-        navigate("/users/dashboard");
-
-        console.log(response.data.token);
+        window.location.href = "/users/dashboard";
+        TokenService.saveToken(response.data.token);
       }
     } catch (error) {
       errorToast(error.response.data.msg);

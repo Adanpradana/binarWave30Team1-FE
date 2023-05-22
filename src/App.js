@@ -1,14 +1,38 @@
-import { Routes, Route, Navigate } from "react-router-dom";
+import { Routes, Route, Navigate, useNavigate } from "react-router-dom";
 
 import LandingpageLayout from "./layouts/LandingpageLayout";
 import UsersLayout from "./layouts/UsersLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import AuthLayout from "./layouts/AuthLayout";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import TokenService from "./utils/services/token";
+import api from "./utils/services/api";
 
 function App() {
-  const [isAuthenticated, setAuthenticated] = useState(false);
+  const token = TokenService.getToken("access_token");
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, [token]);
+  // api.interceptors.response.use(
+  //   (response) => {
+  //     return response;
+  //   },
+  //   function (error) {
+  //     if (error.response && error.response.status === 401) {
+  //       // Clear token and redirect to login page
+  //       TokenService.clearToken();
+  //       setIsAuthenticated(false);
+  //       window.location.href = "/auth/login";
+  //     }
+  //     return Promise.reject(error);
+  //   }
+  // );
   return (
     <Routes>
       <Route
