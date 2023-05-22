@@ -20,6 +20,7 @@ export const PopularGame = () => {
                         className="list-game"
                         />
                     </Card>
+                    <p className='tittle-game'> KUDA LUMPING</p>
                 </Col>
                 <Col>
                     <Card style={{ width:'18rem'}}>
@@ -29,6 +30,7 @@ export const PopularGame = () => {
                         className="list-game"
                         />
                     </Card>
+                    <p className='tittle-game'> KUDA LUMPING</p>
                 </Col>
                 <Col>
                     <Card style={{ width:'18rem'}}>
@@ -38,6 +40,7 @@ export const PopularGame = () => {
                         className="list-game"
                         />
                     </Card>
+                    <p className='tittle-game'> KUDA LUMPING</p>
                 </Col>
                 <Col>
                     <Card style={{ width:'18rem'}}>
@@ -47,14 +50,10 @@ export const PopularGame = () => {
                         className="list-game"
                         />
                     </Card>
+                    <p className='tittle-game'> KUDA LUMPING</p>
                 </Col>
             </Row>
-            <Row>
-                <Col className='tittle-game'>Kuda Tomplok</Col>
-                <Col className='tittle-game'>Kuda Lumping</Col>
-                <Col className='tittle-game'>Tepok Nyamuk</Col>
-                <Col className='tittle-game'>Cat Cat</Col>
-            </Row>
+           
     </div>
   )
 }
