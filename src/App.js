@@ -5,8 +5,10 @@ import UsersLayout from "./layouts/UsersLayout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
 import AuthLayout from "./layouts/AuthLayout";
-const isAuthenticated = false;
+import { useState } from "react";
+
 function App() {
+  const [isAuthenticated, setAuthenticated] = useState(false);
   return (
     <Routes>
       <Route
@@ -25,7 +27,7 @@ function App() {
           isAuthenticated ? (
             <Navigate to={"/users/dashboard"} />
           ) : (
-            <AuthLayout />
+            <AuthLayout setAuthenticated />
           )
         }
       />

@@ -4,7 +4,7 @@ import { getRoutes } from "../config/getRoutes";
 import { routes } from "../routes";
 import { ToastContainer } from "react-toastify";
 
-export default function AuthLayout() {
+export default function AuthLayout({ setAuthenticated }) {
   const navigate = useNavigate();
   useEffect(() => {
     document.documentElement.scrollTop = 0;

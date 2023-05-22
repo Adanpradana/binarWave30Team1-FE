@@ -3,9 +3,43 @@ import { BsEyeSlash, BsEye } from "react-icons/bs";
 import "./style.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import api from "../../utils/services/api";
+import { errorToast, successToast } from "../../utils/globalToast";
+import { ThreeDots } from "react-loader-spinner";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
+
+  //form handler state
+  const [userName, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [city, setCity] = useState("");
+  const [privacy, setPrivacy] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  const payload = {
+    Email: email,
+    Username: userName,
+    Password: password,
+    Total_score: 0,
+    Biodata: "null",
+    City: city,
+  };
+
+  const registerRequest = async (e) => {
+    e.preventDefault();
+    try {
+      setLoading(true);
+      const response = await api.post("/players", payload);
+      successToast(response.data.messages);
+    } catch (error) {
+      errorToast(error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <Container className="" style={{ height: "100vh" }}>
       <Row className="justify-content-center align-items-center h-100">
@@ -20,7 +54,8 @@ export default function Register() {
                     type="text"
                     className="form-control"
                     required
-                    autofocus
+                    autoFocus
+                    onChange={(e) => setUserName(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -29,7 +64,8 @@ export default function Register() {
                     type="email"
                     className="form-control"
                     required
-                    autofocus
+                    autoFocus
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
@@ -38,18 +74,19 @@ export default function Register() {
                   </div>
                   <div className="position-relative  d-flex align-items-center">
                     <input
-                      type={showPassword ? "password" : "text"}
+                      type={showPassword ? "text" : "password"}
                       className="form-control"
                       required
+                      onChange={(e) => setPassword(e.target.value)}
                     />
                     <div
                       onClick={() => setShowPassword(!showPassword)}
                       className="btn  btn-sm m-0 p-0 px-1 position-absolute show-password"
                     >
                       {showPassword ? (
-                        <BsEyeSlash className="text-blue" />
-                      ) : (
                         <BsEye className="text-blue" />
+                      ) : (
+                        <BsEyeSlash className="text-blue" />
                       )}
                     </div>
                   </div>
@@ -60,13 +97,21 @@ export default function Register() {
                     type="text"
                     className="form-control"
                     required
-                    autofocus
+                    autoFocus
+                    onChange={(e) => setCity(e.target.value)}
                   />
                 </div>
                 <div className="form-group">
                   <div className="custom-checkbox custom-control d-flex ">
-                    <input type="checkbox" className="custom-control-input" />
-                    <label for="remember" className="custom-control-label p-2">
+                    <input
+                      type="checkbox"
+                      className="custom-control-input"
+                      onClick={() => setPrivacy(!privacy)}
+                    />
+                    <label
+                      htmlFor="remember"
+                      className="custom-control-label p-2"
+                    >
                       I Agree to the{" "}
                       <Link
                         to="/terms-condition"
@@ -80,14 +125,41 @@ export default function Register() {
                 <div className="form-group">
                   <button
                     type="submit"
-                    className="btn btn-primary btn-block w-100"
+                    className="btn btn-primary  w-100 py-1"
+                    onClick={registerRequest}
                   >
-                    Register
+                    {loading ? (
+                      <div className=" d-flex justify-content-center">
+                        <ThreeDots
+                          height="30"
+                          width="30"
+                          radius="1"
+                          color="#ffaa"
+                          ariaLabel="three-dots-loading"
+                          wrapperStyle={{}}
+                          wrapperClassName="p-0 m-0"
+                          visible={true}
+                        />
+                      </div>
+                    ) : (
+                      <div
+                        style={{
+                          height: 30,
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        Register
+                      </div>
+                    )}
                   </button>
                 </div>
                 <div className="mt-4 text-center">
-                  Already have Account?
-                  <Link to={"/auth/login"}>Login now</Link>
+                  Already have Account?{" "}
+                  <Link to={"/auth/login"} className=" text-decoration-none">
+                    Login now
+                  </Link>
                 </div>
               </form>
             </Card.Body>

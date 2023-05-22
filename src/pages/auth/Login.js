@@ -1,34 +1,34 @@
 import { Container, Row, Card, Nav } from "react-bootstrap";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import "./style.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import axios from "axios";
-import { ThreeDots } from "react-loader-spinner";
-import { errorToast } from "../../utils/globalToast";
 
+import { ThreeDots } from "react-loader-spinner";
+import { errorToast, successToast } from "../../utils/globalToast";
+import api from "../../utils/services/api";
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
-  const login = async () => {};
   const loginHandler = async (e) => {
     e.preventDefault();
-    setLoading(true);
+    const payload = {
+      Username: userName,
+      Password: password,
+    };
     try {
-      const response = await axios({
-        method: "POST",
-        baseURL:
-          "https://binarwave30team1-be-production-deb9.up.railway.app/auth/login",
-        data: {
-          Username: userName,
-          Password: password,
-        },
-      });
-      if (response) {
-        console.log(response.data.msg);
+      setLoading(true);
+      const response = await api.post("/auth/login", payload);
+      if (response.data.auth === false) {
+        errorToast(response.data.message);
+      } else {
+        navigate("/users/dashboard");
+
+        console.log(response.data.token);
       }
     } catch (error) {
       errorToast(error.response.data.msg);
@@ -92,7 +92,10 @@ export default function Login() {
                       className="custom-control-input"
                       onChange={() => console.log("oke")}
                     />
-                    <label for="remember" className="custom-control-label p-2">
+                    <label
+                      htmlFor="remember"
+                      className="custom-control-label p-2"
+                    >
                       Remember Me
                     </label>
                   </div>
