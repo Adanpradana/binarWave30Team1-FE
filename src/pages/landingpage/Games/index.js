@@ -49,6 +49,7 @@ export default function Games() {
                 title={game.Name}
                 image={game.thumbnail_url}
                 description={game.Description}
+                url={game.id}
               />
             </Col>
           ))}
