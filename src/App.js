@@ -12,7 +12,6 @@ import api from "./utils/services/api";
 function App() {
   const token = TokenService.getToken("access_token");
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
     if (token) {

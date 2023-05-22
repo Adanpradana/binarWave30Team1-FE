@@ -1,12 +1,10 @@
-import { Button } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./style.css";
 import { BiMenu, BiMenuAltLeft } from "react-icons/bi";
 import { useState } from "react";
 import TokenService from "../../utils/services/token";
 export default function Sidebar() {
   const [sidebar, setSidebar] = useState(false);
-  const navigate = useNavigate();
 
   const requestLogout = () => {
     TokenService.removeToken();

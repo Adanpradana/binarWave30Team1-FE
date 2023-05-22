@@ -1,5 +1,3 @@
-import { Button } from "react-bootstrap";
-
 export default function Dashboard() {
   return (
     <div style={{ paddingLeft: "250px", paddingTop: "10px" }}>

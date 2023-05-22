@@ -1,11 +1,10 @@
 import { Container, Row, Card, Nav } from "react-bootstrap";
 import { BsEyeSlash, BsEye } from "react-icons/bs";
 import "./style.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-
 import { ThreeDots } from "react-loader-spinner";
-import { errorToast, successToast } from "../../utils/globalToast";
+import { errorToast } from "../../utils/globalToast";
 import api from "../../utils/services/api";
 import TokenService from "../../utils/services/token";
 export default function Login() {

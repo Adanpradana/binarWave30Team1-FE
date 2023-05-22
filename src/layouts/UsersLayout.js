@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate, Route, Routes, Navigate, Outlet } from "react-router-dom";
+import { useNavigate, Route, Routes, Navigate } from "react-router-dom";
 import { routes } from "../routes";
 import { getRoutes } from "../config/getRoutes";
 import Sidebar from "../components/Sidebar";
