@@ -5,10 +5,9 @@ import member3 from "../../../assets/member3.png";
 import member4 from "../../../assets/member4.png";
 import member5 from "../../../assets/member5.png";
 import member6 from "../../../assets/member6.png";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GithubIcon from "@mui/icons-material/GitHub";
+  
 import "./About.css";
+import { CardAbout } from "./CardAbout";
 export default function About() {
   return (
     <section className="section-white">
@@ -16,6 +15,7 @@ export default function About() {
         <div className="row">
           <div className="col-md-12 text-center">
             <h2 className="section-title">The Team Behind Good Game</h2>
+            <hr style={{backgroundColor:'white', height:'2px'}}></hr>
             <p className="section-subtitle">
               Dalam kamus bahasa indonesia “game” diartikan permainan. Permainan
               adalah bagian dari bermain dan bermain juga bagian dari permainan,
@@ -27,229 +27,22 @@ export default function About() {
               terdapat peraturan yang bertujuan untuk membatasi perilakuk pemain
               dan juga menentukan permainan.
             </p>
-          </div>
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>{" "}
-          <div className="col-sm-6 col md-4">
-            <div className="team-item">
-              <img src={member1} className="team-img" alt="pic" />
-              <h3>LABIB PLOP</h3>
-              <div className="team-info">
-                <p>PENGANGGURAN</p>
-                <p>
-                  pengangguran adalah seorang yang tidak bekerja yang selalu
-                  main game mulu
-                </p>
-
-                <ul className="team-icon">
-                  <li>
-                    <a href="#" className="LinkedIn">
-                      <i>
-                        <LinkedInIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Github">
-                      <i>
-                        <GithubIcon />
-                      </i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="Instagram">
-                      <i>
-                        <InstagramIcon />
-                      </i>
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          </div >
+          <div className="col-md-12 text-center">
+            <h2 className="section-title">Our Mission</h2>
+            <hr style={{backgroundColor:'white', height:'2px'}}></hr>
+            <p className="section-subtitle">
+            Seorang Coder bahkan terkadang tidak mengerjakan pekerjaan rumah. Setiap orang memiliki kehidupan kebijaksanaan, dan batasan Tuhan. 
+            </p>
+          </div >
+          <h2 className="col-md-12 text-center" style={{color:'white'}}>Our Team</h2>
+          <hr style={{backgroundColor:'white', height:'2px'}}></hr>
+          <CardAbout Name="Labibplop" Job="DPR (Dewan Permohonan Resign)" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member1}/>
+          <CardAbout Name="Auda Gelap" Job="Polisi Pulang Pergi" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member3}/>
+          <CardAbout Name="Adan" Job="Kang Narik Kabel di Laut" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member2}/>
+          <CardAbout Name="Akmal" Job="Pendamping Karaoke" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member2}/>
+          <CardAbout Name="Vincent" Job="Kerja Dirumah Makan" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member3}/>
+          <CardAbout Name="Mirza" Job="Kang Madu Baduy" description="pengangguran adalah seorang yang tidak bekerja yang selalu main game mulu" image={member1}/>
         </div>
       </div>
     </section>

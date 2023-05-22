@@ -1,10 +1,16 @@
 .section-white {
-  background: #fff;
+  background-image: url("../../../assets/bg5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 70px 0;
 }
 
+.section-title{
+  color: white;
+}
+
 .team-item {
-  background: #f4f5f6;
+  background: rgba(0, 0, 0, 0.5);
   text-align: center;
   margin: 20px 0;
   padding: 50px 20px 40px 20px;
@@ -16,7 +22,7 @@
 }
 
 .team-item:hover {
-  background: #3956de;
+  background: black;
   color: white;
 }
 
@@ -33,6 +39,11 @@
 
 .section-subtitle {
   white-space: pre-line;
+  padding-bottom: 100px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  line-height: 1.5;
+  color: white;
 }
 .team-item h3 {
   color: #ddd;
