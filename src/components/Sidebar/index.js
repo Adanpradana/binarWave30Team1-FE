@@ -18,13 +18,6 @@ export default function Sidebar() {
       setName(username);
     }
   }, []);
-  // let user = null;
-  // if (localStorage.getItem("token")) {
-  //   user = jwtDecode(localStorage.getItem("token"));
-  //   localStorage.setItem("username", user.Username);
-  //   localStorage.setItem("iat", user.iat);
-  // }
-  // console.log(user);
 
   const requestLogout = () => {
     TokenService.removeToken();
