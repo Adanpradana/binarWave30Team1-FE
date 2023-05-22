@@ -19,20 +19,20 @@ function App() {
       setIsAuthenticated(true);
     }
   }, [token]);
-  // api.interceptors.response.use(
-  //   (response) => {
-  //     return response;
-  //   },
-  //   function (error) {
-  //     if (error.response && error.response.status === 401) {
-  //       // Clear token and redirect to login page
-  //       TokenService.clearToken();
-  //       setIsAuthenticated(false);
-  //       window.location.href = "/auth/login";
-  //     }
-  //     return Promise.reject(error);
-  //   }
-  // );
+  api.interceptors.response.use(
+    (response) => {
+      return response;
+    },
+    function (error) {
+      if (error.response && error.response.status === 401) {
+        // Clear token and redirect to login page
+        TokenService.clearToken();
+        setIsAuthenticated(false);
+        window.location.href = "/auth/login";
+      }
+      return Promise.reject(error);
+    }
+  );
   return (
     <Routes>
       <Route

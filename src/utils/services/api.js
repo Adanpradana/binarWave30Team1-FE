@@ -1,7 +1,6 @@
-  import axios from "axios";
+import axios from "axios";
 import { errorToast } from "../globalToast";
 import TokenService from "./token";
-import { useNavigate } from "react-router-dom";
 
 const config = {
   baseURL: process.env.REACT_APP_BASE_URL,

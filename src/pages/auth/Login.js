@@ -13,7 +13,6 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const loginHandler = async (e) => {
     e.preventDefault();

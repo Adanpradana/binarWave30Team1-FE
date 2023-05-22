@@ -21,7 +21,6 @@ export default function UsersLayout() {
         {getRoutes(routes, "/users")}
         <Route path="*" element={<Navigate to={"/users/dashboard"} />} />{" "}
       </Routes>
-      <Outlet />
     </>
   );
 }
