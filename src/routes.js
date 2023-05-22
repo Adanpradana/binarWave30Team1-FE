@@ -64,7 +64,7 @@ export const routes = [
       },
       {
         name: "high score",
-        path: "/score",
+        path: "/playgame",
         element: <Score />,
       },
     ],

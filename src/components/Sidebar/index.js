@@ -53,11 +53,11 @@ export default function Sidebar() {
                 <span className="nav_name">Dashboard</span>
               </Link>
               <Link
-                to={"/users/score"}
+                to={"/users/playgame"}
                 className="nav_link text-decoration-none"
               >
                 <i className="bx bx-user nav_icon"></i>
-                <span className="nav_name">Users</span>
+                <span className="nav_name">play games</span>
               </Link>
             </div>
           </div>

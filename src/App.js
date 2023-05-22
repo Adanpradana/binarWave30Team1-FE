@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 import AuthLayout from "./layouts/AuthLayout";
 import { useEffect, useState } from "react";
 import TokenService from "./utils/services/token";
-import api from "./utils/services/api";
 
 function App() {
   const token = TokenService.getToken("access_token");
