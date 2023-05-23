@@ -15,7 +15,7 @@ export default function Navbar1() {
             marginLeft: "100px",
             fontSize: "30px",
           }}
-          href="#"
+          href="/"
         >
           GoodGame
         </Navbar.Brand>
