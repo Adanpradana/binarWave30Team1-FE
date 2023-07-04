@@ -6,7 +6,7 @@ import { useState } from "react";
 import api from "../../utils/services/api";
 import { errorToast, successToast } from "../../utils/globalToast";
 import { ThreeDots } from "react-loader-spinner";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [showPassword, setShowPassword] = useState(false);
@@ -35,10 +35,12 @@ export default function Register() {
     try {
       setLoading(true);
       const response = await api.post("/players", payload);
-      successToast(response.data.messages);
-      navigate('/auth/login');
+      if (response.status === 200) {
+        successToast(response.data.message);
+        navigate("/auth/login");
+      }
     } catch (error) {
-      errorToast(error);
+      errorToast(error.response.data.msg);
     } finally {
       setLoading(false);
     }
